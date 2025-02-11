@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: .\\proc_env\\Scripts\\python.exe -m black
+        language: system
+        types: [python]
+        require_serial: true
+        
+      - id: isort
+        name: isort
+        entry: .\\proc_env\\Scripts\\python.exe -m isort
+        language: system
+        types: [python]
+        require_serial: true
+
+      - id: pylint
+        name: pylint
+        entry: .\\proc_env\\Scripts\\python.exe -m pylint
+        language: system
+        types: [python]
+        require_serial: true
+
+      

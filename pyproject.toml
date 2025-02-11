@@ -1,0 +1,21 @@
+[tool.black]
+line-length = 88  # Set desired line length
+target-version = ['py310']  # Adjust Python version as needed
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+combine_as_imports = true
